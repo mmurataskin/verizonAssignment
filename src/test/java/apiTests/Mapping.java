@@ -21,7 +21,7 @@ public class Mapping {
                 "      \"firstName\": \"Murat\",\n" +
                 "      \"lastName\": \"Taskin\",\n" +
                 "      \"gradeLevel\": 10,\n" +
-                "      \"subject\": \"Advanced Machine Learning\"\n" +
+                "      \"subject\": \"Advanced Algebra\"\n" +
                 "    }";
         // Jackson
         ObjectMapper mapper = new ObjectMapper();
@@ -34,7 +34,7 @@ public class Mapping {
     @Test
     public void objectToJson() throws JsonProcessingException {
         Professor professor = new Professor();
-        professor.setSubject("Intro to CS101");
+        professor.setSubject("Intro to Geometry");
         professor.setId(34);
         professor.setFirstName("Howard");
 

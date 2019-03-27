@@ -1,5 +1,5 @@
 Feature: Instructor Subject Verification
-  @instructorJava
+  @professorJava
   Scenario: Intro to Java Programming Subject Verification
-    When user hits instructor API
-    Then user verify first and last name each instructor with required subject
+    When user hits professor API
+    Then user verify first and last name each professor with required subject

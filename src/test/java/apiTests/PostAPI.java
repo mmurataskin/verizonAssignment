@@ -123,7 +123,7 @@ public class PostAPI {
     public void OscarTest2() {
         apiRunner.runGet("http://.........................................");
         for (Professor each : apiRunner.getResponse().getProfessors()) {
-            if (each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to Java programming")) {
+            if (each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to AP Calculus")) {
                 System.out.println(each.getLastName());
 
             }
@@ -137,7 +137,7 @@ public class PostAPI {
         apiRunner.runGet("http://............................................");
         List<Professor> instructors = apiRunner.getResponse().getProfessors()
                 .stream()
-                .filter(each -> each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to Java programming"))
+                .filter(each -> each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to Biology"))
                 .collect(Collectors.toList());
 
 
@@ -155,7 +155,7 @@ public class PostAPI {
         myList.add("bb");
         List<String> ins = new ArrayList<>();
         for (Professor each : apiRunner.getResponse().getProfessors()) {
-            if (each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to Java programming")) {
+            if (each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to AP Chemistry")) {
                 ins.add(each.getLastName());
             }
         }
@@ -185,7 +185,7 @@ public class PostAPI {
         myList.stream().forEach(expected -> {
             boolean exists = actualInstructors
                     .stream()
-                    .filter(each -> each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to Java programming"))
+                    .filter(each -> each.getSubject() != null && each.getSubject().equalsIgnoreCase("Intro to Programming"))
                     .filter(name -> name.getLastName().equalsIgnoreCase(expected))
                     .findAny()
                     .isPresent();
