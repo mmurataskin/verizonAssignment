@@ -10,7 +10,7 @@ public class StudentEmail_steps {
 
     @When("user hits students API")
     public void user_hits_students_API() {
-        apiRunner.runGet("http://cybertekchicago.com/student/all");
+        apiRunner.runGet("http://..............................");
     }
 
     @Then("user verify email contains properly characters")
